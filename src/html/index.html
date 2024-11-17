@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guns N' Roses - Compra de Entradas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>GUNS N' ROSES</h1>
+    </header>
+    
+    <!-- Sección de Descripción del Grupo -->
+    <section>
+        <h2>Descripción del Grupo</h2>
+        <img src="../img/grupo2.jpg" alt="Imagen del grupo musical" style="max-width: 100%; height: auto;">
+        <p><strong>Guns N' Roses</strong> es una banda de rock estadounidense formada en Los Ángeles en 1985. 
+            Conocidos por su estilo agresivo y su fusión de hard rock, punk y heavy metal, rápidamente ganaron reconocimiento global con su álbum debut, 
+            <em>Appetite for Destruction</em>, lanzado en 1987. Este álbum incluye éxitos icónicos como "Sweet Child o' Mine", "Welcome to the Jungle" y "Paradise City". 
+            A lo largo de los años, la banda ha tenido varias formaciones, siendo <strong>Axl Rose</strong>, su vocalista, el único miembro constante. 
+            Sin embargo, la alineación clásica incluye a figuras destacadas como el guitarrista <strong>Slash</strong> y el bajista <strong>Duff McKagan</strong>. 
+            Su música y estilo rebelde los han convertido en leyendas del rock, influenciando a generaciones y vendiendo más de 100 millones de discos en todo el mundo.</p>
+
+    </section>
+    
+    <!-- Sección de Fechas de Conciertos -->
+    <section>
+        <h2>Fechas de Conciertos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Lugar</th>
+                    <th>Hora</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/06/2025</td>
+                    <td>Los Ángeles, CA</td>
+                    <td>20:00</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>15/06/2025</td>
+                    <td>New York, NY</td>
+                    <td>19:30</td>
+                    <td>$180</td>
+                </tr>
+                <tr>
+                    <td>30/06/2025</td>
+                    <td>Miami, FL</td>
+                    <td>21:00</td>
+                    <td>$130</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <!-- Sección de Formulario para Compra de Entradas -->
+    <section>
+        <h2>Compra de Entradas</h2>
+        <form id="compraForm" onsubmit="enviarDatos(); return false;">
+            <!-- Campos del formulario -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="fecha_concierto">Fecha del Concierto:</label>
+            <input type="date" id="fecha_concierto" name="fecha_concierto" required>
+            
+            <label for="lugar_concierto">Lugar del Concierto:</label>
+            <select id="lugar_concierto" name="lugar_concierto">
+                <option value="Los Ángeles, CA">Los Ángeles, CA</option>
+                <option value="New York, NY">New York, NY</option>
+                <option value="Miami, FL">Miami, FL</option>
+            </select>
+            
+            <label for="cantidad">Cantidad de Entradas:</label>
+            <select id="cantidad" name="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+            <label>Método de Pago:</label>
+            <fieldset class="metodo-pago">
+                <div class="opcion-pago">
+                    <input type="radio" id="tarjeta" name="metodo_pago" value="Tarjeta de Crédito" required>
+                    <img src="../img/icon_mastercard.png" alt="MasterCard" class="logo-pago">
+                    <label for="tarjeta">Tarjeta de Crédito</label>
+                </div>
+                <div class="opcion-pago">
+                    <input type="radio" id="paypal" name="metodo_pago" value="PayPal">
+                    <img src="../img/icon_paypal.png" alt="PayPal" class="logo-pago">
+                    <label for="paypal">PayPal</label>
+                </div>
+                
+                <div class="opcion-pago">
+                    <input type="radio" id="transferencia" name="metodo_pago" value="Transferencia Bancaria">
+                    <img src="../img/icon_bizum.png" alt="Bizum" class="logo-pago">
+                    <label for="transferencia">Transferencia Bancaria</label>
+                </div>
+            </fieldset>
+            
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </section>
+	
+	  <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Guns N' Roses Concerts - Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="/terminos">Términos y condiciones</a></li>
+            <li><a href="/privacidad">Política de privacidad</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+        <div>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
